@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "64ae24a9-4b52-49ec-a78f-95064628fc4a",
+		"name": "OneVarsity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38079346"
+	},
+	"item": [
+		{
+			"name": "upload_pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/rp520/Downloads/prakhar's resume.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/upload_pdf/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"upload_pdf",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "summarise",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/rp520/Downloads/Task Details.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/summarize/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"summarize",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "learning-path",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"goal\": \"Become a Data Scientist\",\r\n  \"current_skills\": \"Python, SQL, basic statistics\",\r\n  \"timeframe\": \"6 months\",\r\n  \"weekly_hours\": \"15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/learning-path/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"learning-path",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pdf_qa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\":\"what are his skills?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/qa/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"qa",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
